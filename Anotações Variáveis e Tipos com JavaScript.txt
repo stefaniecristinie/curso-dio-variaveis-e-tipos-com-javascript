@@ -1,0 +1,194 @@
+Diferença entre var, const e let:
+let e const = escopo de bloco = só funciona dentro do bloco.
+hoisting = atribuir um valor a uma variável antes de declarar ela. Somente variável. let não funciona, precisa declarar antes (let numberOne;).
+Redeclaração = só acontece com o var. var a = 1; a = nome da variável.
+Reatribuição = let. a = 2; Variável também pode reatribuir.
+- Utilizar let do que var.
+Não pode reatribuir e redeclarar o valor de uma constante.
+
+Atribuição de valores:
+Camel Case: mais utilizado.
+Upper Case Snake Case: mais utilizado para constantes.
+
+Estrutura de dados:
+typeof no console web = diz o tipo. ex: let nome = "João"; typeof nome; retorna "string".
+
+Console Web - Strings:
+
+let nome = 'João'
+let sobrenome = 'Pedro'
+
+typeof nome
+
+nome.concat(sobrenome) //retorna 'JoãoPedro'
+
+let concatenado = nome.concat(sobrenome)
+
+typeof concatenado
+
+concatenado.lenght //retorna 9
+
+let exemplo = 'blablabla' //tipo primitivo
+
+let exemplo = new String('blablabla') 
+
+typeof exemplo //retorna object
+
+let vazio = "" //declarar um valor vazio
+
+indice começa do 0 - nome [1]
+tamanho começa do 1 - nome.lenght
+
+concatenado = nome + " " + sobrenome // retorna 'João Pedro'
+
+ou
+
+concatenado = `${nome} ${sobrenome}`
+
+concatenado = nome + "\n" + sobrenome // pular linhas.
+
+ou
+
+concatenado = `${nome} 
+${sobrenome}`
+
+imprimir aspas = concatenado = "\""
+
+let frase = 'Olá, tudo bem?'
+
+frase.split("") // retorna:
+    ["O",
+    "l",
+    "á",
+    ",",
+    " ",
+    "t",
+    "u",
+    "d",
+    "o",
+    " ",
+    "b",
+    "e",
+    "m",
+    "?"]
+
+frase.split(" ") //com espaço entre as aspas. retorna:
+['Olá,', 'tudo', 'bem?']
+
+frase.includes('tudo') // retorna true, serve para procurar.
+
+frase.startsWith("O") //true, começa com essa letra?
+
+frase.endsWith("?") //true, termina com essa letra?
+
+frase.replace(",", "!") //muda a , por !.
+
+let stringModificada = frase.replace(",", "!") //salvar.
+
+Console Web - Numbers:
+
+let num = 100
+
+num * 5
+
+num % 2 //retorna 0, saber se um número é par.
+
+num2 = 101
+
+num2 % 2 //retorna 1, saber se o número é ímpar.
+
+Math = objeto.
+
+let fiveByThree = 5 / 3
+
+Math.floor(fiveByThree) //arredonda para baixo.
+
+Math.ceil(fiveByThree) //arredonda para cima.
+
+percent = 10
+
+percent + "%" //para porcentagens.
+
+percent.toString() //converter para string.
+
+Booleans:
+
+- verdadeiro ou falso.
+
+Console web:
+
+let validation = 3 === 0
+
+validation //retorna false
+
+validation.toString()//transformar valor em String - Objeto. Retorna true.
+
+!validation //retorna false. O contrario do valor acima.
+
+Arrays ou vetores:
+
+let array = [] ou let array = new Array() //É um objeto.
+
+array.push(3)//adicionar um item no array.
+
+array//retorna o que foi adicionado.
+
+array.pop()//retira o último número adicionado.
+
+array.shift()//retira o primeiro elemento adicionado.
+
+array.unshift(1)//adiciona no começo da lista.
+
+iterabilidade = significa que eu posso fazer operações em cada um dos meus elementos do array.
+
+for(let i = 0; i < array.length; i++) { //console.log para cada um desses itens do array.
+console.log(array[i])
+}
+
+array.includes(3)//ver se existe esse item. Retorna false.
+
+array.every(item => item === 5)//saber se todos os itens são iguais a 5. Retorna false.
+
+array.some(item => item === 5)//saber se algum dos itens é 5.
+
+array.reverse()//muda as posições, coloca ao contrario.
+
+Objetos:
+
+let obj = {}
+
+obj.name = "julia"
+
+obj.age = 20
+
+obj//retorna tudo que está adicionado.
+
+Object.values(obj)//saber os valores do objeto. Retorna julia e 20.
+
+Object.keys(obj)//saber as chaves. Retorna name e age.
+
+let person = {
+name: "Julia",
+age: 20,
+adress: "Rua 2"
+}
+
+Sintaxe para retornar: person.name ou person["name"]
+
+Sintaxe para declarar: person["numberOfSiblings"] = 3
+
+let mom = "nameOfMom"
+
+person[mom] = "Maria"
+
+Empty, null e undefined:
+
+Empty = declarou a variável. Inicializou mas não tem nada dentro dela. Ex: let abacaxi = ""
+
+Null = declarou mas quer que o valor não exista. Ex: abacaxi = null. Não é falso nem verdadeiro.
+
+Undefined = não declara, valor indefinido, o valor não existe. Não atribuiu valor ainda.
+
+!abacaxi //retorna true. false value = valores tratados como falso mas não são iguais ao false do booleano.
+
+- String e Array = lenght.
